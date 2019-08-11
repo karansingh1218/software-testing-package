@@ -1,0 +1,25 @@
+config:
+  plugins : 
+    fuzzer: {}
+  target: "http://afsconnect2.njit.edu:5682"
+  phases:
+    - duration: 15
+      arrivalRate: 20
+scenarios:
+  - name: "fuzz test"
+    flow:
+      - post: 
+          url: "/"
+          followRedirect: true
+          capture : 
+            json : '$.rows[0].title'
+            as : 'title'
+          headers: 
+            Accept : 'application/json'
+            Content-Type: 'application/json'
+          body: "{\"query\": \"{{ naughtyString }}\" ,\"searchType\":\"multipleItemSearch\"}"
+          method: 'POST'
+          mode: "cors"
+          dataType: 'jsonp'
+          credentials: "same-origin"
+      - log: "nauthyString : {{ naughtyString }}  \ntitle: {{title}}\n\n" 

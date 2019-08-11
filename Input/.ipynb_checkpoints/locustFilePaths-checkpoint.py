@@ -1,0 +1,5 @@
+locustFilePath1 = "LoadTesting/locustfile.py"
+locustFilePath2 = "LoadTesting/nodeServerLocustGET.py"
+locustFilePath3 = "LoadTesting/nodeServerLocustPOST.py"
+locustFilePath4 = "LoadTesting/randomQueryLocust.py"
+locustFilePath5 = "LoadTesting/naughtyLocust.py"

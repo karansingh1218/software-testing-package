@@ -1,0 +1,7 @@
+USER_POOL_ID= "NA"
+APP_CLIENT_ID = "NA"
+IDENTITY_POOL_ID = "NA"
+REGION =  "NA
+AWS_SERVICE = 'cognito-idp'
+ADMIN_USERNAME = 'admin@example.com'
+TEMPORARY_PASSWORD = 'Passw0rd!'
